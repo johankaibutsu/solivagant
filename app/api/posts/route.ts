@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { db } from "@/lib/db";
-import { revalidateTag } from "next/cache";
+import { revalidatePath } from "next/cache";
 
 export async function GET() {
   try {
@@ -42,7 +42,7 @@ export async function POST(request: Request) {
       },
     });
 
-    revalidateTag("posts");
+    revalidatePath("/");
     return NextResponse.json(post);
   } catch (error) {
     return NextResponse.json(

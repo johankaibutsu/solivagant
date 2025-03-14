@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { db } from "@/lib/db";
-import { revalidateTag } from "next/cache";
+import { revalidatePath } from "next/cache";
 
 export async function GET(
   request: Request,
@@ -55,7 +55,7 @@ export async function PATCH(
       },
     });
 
-    revalidateTag(`post-${params.id}`);
+    revalidatePath(`/post/${params.id}`);
     return NextResponse.json(post);
   } catch (error) {
     return NextResponse.json(
@@ -82,7 +82,7 @@ export async function DELETE(
       },
     });
 
-    revalidateTag(`post-${params.id}`);
+    revalidatePath(`/post/${params.id}`);
     return NextResponse.json({ message: "Post deleted" });
   } catch (error) {
     return NextResponse.json(
