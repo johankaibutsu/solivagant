@@ -10,6 +10,7 @@ export async function GET() {
         createdAt: "desc",
       },
     });
+    revalidatePath("/");
 
     return NextResponse.json(posts, {
       headers: { "Cache-Control": "s-maxage=60, stale-while-revalidate" },
