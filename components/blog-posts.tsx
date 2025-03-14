@@ -1,6 +1,6 @@
 import { db } from "@/lib/db"
 import BlogPost from "./blog-post"
-
+export const revalidate = 0;
 export default async function BlogPosts() {
   const posts = await db.post.findMany({
     orderBy: {
