@@ -66,8 +66,13 @@ export const blogPosts: Post[] = [
     id: "11",
     text: "No, I don't want your number\nNo, I don't wanna give you mine and\nNo, I don't wanna meet you nowhere\nNo, I don't wanna none of that, baby",
     date: "March 7, 2025",
-    mediaUrl:
-      "https://open.spotify.com/track/7gKM4X1z9u2GwzqaP6GX2U",
+    mediaUrl: "https://open.spotify.com/track/7gKM4X1z9u2GwzqaP6GX2U",
+  },
+  {
+    id: "12",
+    text: "You pull up to a red light\nA man jerks your door open, says\n'Out of the car, I'm taking your car'\nYou say, 'Okay, take it, just don't hurt me'\nYou know what I do?\nI pull out the Glock, put it on his forehead\nAnd spill his brains all over the concrete",
+    date: "March 20, 2025",
+    mediaUrl:"https://open.spotify.com/track/44yQYu2Ap1nvR85fLLuKNi",
   },
 ];
 
